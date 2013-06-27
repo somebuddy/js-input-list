@@ -2,20 +2,18 @@ $(document).find(".input-list").each(function() {
 		
 		var MinInputs		= $(this).data("minItems") || 1;
 		var MaxInputs       = $(this).data("maxItems") || 0;
-		var InputsWrapper   = $(this); //Input boxes wrapper ID
+		var InputsWrapper   = $(this); 
 		
-		var x = InputsWrapper.find(".input-list-item").length; //initlal text box count
-		var FieldCount=1; //to keep track of text box added
+		var x = InputsWrapper.find(".input-list-item").length; 
+		var FieldCount=1;
 		
 		function add_remove_item_click_trigger(item) {
-			console.log("Min: " + MinInputs);
-			console.log("Max: " + MaxInputs);
 			$(item).find(".removeitem").click(function(e) {
 					$(this).closest(".input-list").find(".input-list-add-button").each(function (e) {
 								$(this).show();
 							});				
 					if( x > MinInputs ) {
-						$(this).parent('div').remove(); //remove text box                
+						$(this).parent('div').remove();       
 						x--; 
 					}
 				})
@@ -27,10 +25,9 @@ $(document).find(".input-list").each(function() {
 					})
 		}
 
-		$(InputsWrapper).find(".input-list-add-button").click(function (e)  //on add input button click
+		$(InputsWrapper).find(".input-list-add-button").click(function (e)
 		{
-				FieldCount++; //text box added increment
-				//add input box	
+				FieldCount++;
 				input_name = $(InputsWrapper).attr('name') + "[]"
 				new_input = $(InputsWrapper).find(".input-list-item:last").clone();				
 				$(new_input).find("input").each(function(index) {
