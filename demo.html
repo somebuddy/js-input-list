@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Input List</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+	</head>
+<body>	
+	<div class="container">
+		<div class="page-header">
+			<h1>Input List Demo</h1>
+		</div>		
+		<div class="row">
+			<div class="span12">
+				<div class="row-fluid">
+					<div class="span6">
+						<fieldset>
+							<legend>Input Set 1</legend>
+							<div class="alert alert-info">
+								<strong>Min items: </strong>1
+								<br />
+								<strong>Max items: </strong>5
+							</div>
+							<div id="InputsWrapper" class="input-list" name="InputSet1" data-min-items = 1 data-max-items = 5>
+								<div class="control-group form-inline input-list-item">
+									<input id="appendedPrependedInput" type="text">
+									<a href="#" role="button" class="removeitem text-error" style="help-inline"><i class="icon-remove"></i></a>
+								</div>
+								<a href="#" class="input-list-add-button"><i class="icon-plus-sign"></i> I want more!</a>
+							</div>
+						</fieldset>
+					</div>
+					<div class="span6">
+						<fieldset>
+							<legend>Input Set 2</legend>
+							<div class="alert alert-info">
+								<strong>Min items: </strong>undefined (default: 1)
+								<br />
+								<strong>Max items: </strong>undefined (unbounded)
+							</div>
+							<div id="InputsWrapper" class="input-list" name="InputSet2">
+								<a href="#" class="input-list-add-button"><i class="icon-plus-sign"></i> I want more!</a>
+								<div class="control-group form-inline input-list-item">
+									<input id="appendedPrependedInput" type="text">
+									<a href="#" role="button" class="removeitem text-error" style="help-inline"><i class="icon-remove"></i></a>
+								</div>
+								<a href="#" class="input-list-add-button"><i class="icon-plus-sign"></i> I want more!</a>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/input-list.js"></script>
+</body>
+</html>
